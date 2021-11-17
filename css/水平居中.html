@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            margin:auto以及负margin方法需要子元素宽度
+        */
+        .container{
+            width: 150px;
+            height: 300px;
+            border: grey 1px solid;
+            margin-top: 30px;
+            position: relative;
+        }
+        .item{
+            width: 100px;
+        }
+        .container1{
+            text-align: center;
+        }
+        .item2{
+            position: absolute;
+            left: 50%;
+            margin-left: -50px;
+        }
+        .item3{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,0);
+        }
+        .item5{
+            margin: auto;
+        }
+        .container4{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1 container">
+        <span class="item1">content</span>
+    </div>
+    <div class="container">
+        <div class="item2">content</div>
+    </div>
+    <div class="container">
+        <div class="item3">content</div>
+    </div>
+    <div class="container4 container">
+        <div class="item4">content</div>
+    </div>
+    <div class="container">
+        <div class="item5 item">content</div>
+    </div>
+</body>
+</html>
